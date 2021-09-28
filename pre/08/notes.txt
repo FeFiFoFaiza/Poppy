@@ -1,0 +1,6 @@
+Faiza Huda
+APCS
+HW05 -- Summer Asignment <08-CodingBat>
+2021-09-27
+
+Coding Bat was pretty neat my only problem was the formatting capabilities of it. Writing long code reminded me of GitHub and the infinite side scroll. This was horrible for the SumOfSines problem which was the only one I couldn't pass all of the tests (but I think that's because of all the rounding).
