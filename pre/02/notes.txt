@@ -1,0 +1,8 @@
+Faiza Huda
+APCS
+HW05 -- Summer Asignment <02-DataTypes>
+2021-09-27
+
+Declare variables by first stating type and name then assign it a value.
+Ex
+  int ocho = 8;
