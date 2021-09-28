@@ -1,0 +1,8 @@
+Faiza Huda
+APCS
+HW05 -- Summer Asignment <06-Loops>
+2021-09-27
+
+Having all the for loop information in one line is pretty smart though a bit confusing at first when trying to read it. Do-while loop is different and interesting- would want to see it in action to see its usefullness in real time. 
+
+I could not understand 5 at all. It was just too many words and numbers that strung together had no meaning in my brain. I did the other exercises though. 
