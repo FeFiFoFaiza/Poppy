@@ -1,0 +1,7 @@
+Faiza Huda
+APCS
+HW05 -- Summer Asignment <07-Arrays>
+2021-09-27
+
+Arrays and indexing just aren't my best skills. It's kind of hard to keep track of all the brackets and positions and numbers. I should probably find a diagramming method that could help me keep track of it all.
+I kind of got tired of java and did rush this chapter.
