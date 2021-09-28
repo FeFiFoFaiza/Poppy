@@ -1,0 +1,9 @@
+1. No, I wug.You wugga wug.I wug.
+
+2. Maybe smth like this? I honestly don't understand
+   | main [     ] | 
+   | zoop [     ] | 
+   | baffle [    ] | 
+   | ping [      ] | 
+      
+3. baffle -> ping -> baffle -> ping ... (Non-escape)
