@@ -1,0 +1,10 @@
+Faiza Huda
+APCS
+HW05 -- Summer Asignment <05-ValueMethods>
+2021-09-27
+
+void- nothing to output
+int- integer output
+double- double output
+
+Seems kind of self explanatory 
