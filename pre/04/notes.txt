@@ -1,0 +1,6 @@
+Faiza Huda
+APCS
+HW05 -- Summer Asignment <04-Conditionals>
+2021-09-27
+
+They have the same flow as conditionals in other languages like Python. Only formatting is different.
