@@ -1,0 +1,15 @@
+Faiza Huda
+APCS
+HW05 -- Summer Asignment <03-VoidMethods>
+2021-09-27
+
+Java is written in a specific format:
+
+public class {
+
+      public static void m(int a, String b){
+      // dostuff
+      }
+}
+
+Make sure to keep track of {curly brackets} and always include ;
