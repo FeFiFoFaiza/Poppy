@@ -13,3 +13,5 @@ public class {
 }
 
 Make sure to keep track of {curly brackets} and always include ;
+
+Can't understand how to do stack diagram- but I can see why it would be useful in reading code as it keeps tracks of methods and parameters.
