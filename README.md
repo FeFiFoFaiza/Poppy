@@ -1,5 +1,5 @@
 # Poppy
--------------------
 
-# work repo for THINKER_NAME
+# work repo for Faiza Huda
+-------------------
 ### APCS 2021-2022
