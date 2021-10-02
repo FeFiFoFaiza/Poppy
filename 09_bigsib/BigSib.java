@@ -8,7 +8,7 @@
 
 public class BigSib{
   
-  static void Greet (String name) {
+  static void greet (String name) {
     System.out.println("Oh look it's " + name + "! How do it do?");
   }
  
