@@ -1,7 +1,7 @@
 /*
  TNPG: Tobias_Hillary_7 | Ajax, Diana Akhmedova, Tasnim Chowdhury, Faiza Huda, Mary, Truthful Tom
  APCS
- HW08 -- Refactor Freshie Zero
+ HW09 -- What are BigSibs Good for?
  2021-09-30
  
  Discoveries:
