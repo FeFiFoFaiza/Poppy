@@ -1,8 +1,8 @@
 /*
- TNPG: Money Hags | Alpaca, Faiza Huda, Ziying Jian, Nina Jiang, Truthful Tom, Scruffy
+ TNPG: Damning Duo of Salvation| Faiza Huda, Truthful Tom, Lauren Lee
  APCS
- HW10 -- Refactor Big Sib One
- 2021-10-04
+ HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
+ 2021-10-05
 
 */
 
