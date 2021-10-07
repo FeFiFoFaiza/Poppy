@@ -1,14 +1,9 @@
 /*
- TNPG: Damning Duo of Salvation| Faiza Huda, Truthful Tom, Lauren Lee
+ TNPG: Watur| Faiza Huda, Truthful Tom, Lauren Lee
  APCS
- HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
+ HW13 -- Where do Big Sibs Come From?
  2021-10-05
-
- Disco:
- - You can just declare variables without assigning them a value upfront
  
- QCC:
- - Do I need static if I'm using instances? 
 */
 
 public class Greet {
@@ -17,8 +12,7 @@ public class Greet {
    
     String greeting;
 
-    BigSibTest richard = new BigSibTest("Word up");
-
+    BigSib richard = new BigSib("Word up");
     
     greeting = richard.greet("freshman");
     System.out.println(greeting);
