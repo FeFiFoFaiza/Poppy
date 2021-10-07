@@ -10,7 +10,7 @@
  - In order to output more things i.e "Sup ma," you'd need to invoke setHelloMsg
 */
 
-public class BigSibTest{
+public class BigSib{
 
   String helloMsg;
 
