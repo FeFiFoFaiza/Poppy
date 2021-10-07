@@ -1,9 +1,13 @@
 /*
- TNPG: Damning Duo of Salvation| Faiza Huda, Truthful Tom, Lauren Lee
+ TNPG: Watur| Faiza Huda, Truthful Tom, Lauren Lee
  APCS
- HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
- 2021-10-05
+ HW13 -- Where do Big Sibs Come From?
+ 2021-10-06
 
+ DISCO:
+ - Constructors need parameters
+ QCC:
+ - In order to output more things i.e "Sup ma," you'd need to invoke setHelloMsg
 */
 
 public class BigSibTest{
