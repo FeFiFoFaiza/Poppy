@@ -1,5 +1,5 @@
 /*
- TNPG: Damning Duo of Salvation| Faiza Huda, Truthful Tom, Lauren Lee
+ TNPG: Damning Duo(Trio) of Salvation| Faiza Huda, Truthful Tom, Lauren Lee
  APCS
  HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
  2021-10-05
