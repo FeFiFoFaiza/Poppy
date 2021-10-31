@@ -14,6 +14,8 @@ public class countCode{
 	public static void main (String[] args){
 		countCode test = new countCode();
 
-		System.out.println(test.countCode("aaacodebbb"));
+		System.out.println(test.countCode("aaacodebbb")); // → 1
+		System.out.println(test.countCode("AAcodeBBcoleCCccorfDD")); // → 2
+		System.out.println(test.countCode("ode")); // → 0
 	}
 }
