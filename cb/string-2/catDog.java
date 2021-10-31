@@ -5,21 +5,27 @@ public class catDog{
   string.
 	*/
 	
-	public int countHi(String str) {
-  int hiCtr = 0;
-    for(int i = 0; i < str.length() - 1; i++){
-      if (str.substring(i, i + 2).equals("hi")){
-        hiCtr++;
-      }
-    }
-  return hiCtr;
-  }
+public boolean catDog(String str) {
+  	int catCtr = 0;
+  	int dogCtr = 0;
+  	for(int i = 0; i < str.length() - 2; i++){
+    		if (str.substring(i, i + 3).equals("cat")){
+      			catCtr++;
+    		}
+  	}
+  	for(int i = 0; i < str.length() - 2; i++){
+    		if (str.substring(i, i + 3).equals("dog")){
+      			dogCtr++;
+    		}
+ 	}
+  	return dogCtr == catCtr;
+}
 
 	public static void main (String[] args){
 		catDog test = new catDog();
 
 		System.out.println(test.catDog("catdog")); // → true
 		System.out.println(test.catDog("1cat1cadodog")); // → true
-		System.out.println(catDog("dogogcat")); // → true
+		System.out.println(test.catDog("dogogcat")); // → true
 	}
 }
