@@ -7,15 +7,15 @@ public class endOther{
 	*/
 	
 	public boolean endOther(String a, String b) {
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-    int minString = Math.min(a.length(), b.length());
+    		a = a.toLowerCase();
+    		b = b.toLowerCase();
+    		int minString = Math.min(a.length(), b.length());
   
-    String aInB = b.substring(b.length()-minString);
-    String bInA = a.substring(a.length()-minString);
+    		String aInB = b.substring(b.length()-minString);
+    		String bInA = a.substring(a.length()-minString);
   
-    return aInB.equals(bInA);
-  }
+    		return aInB.equals(bInA);
+  	}
 
 	public static void main (String[] args){
 		endOther test = new endOther();
