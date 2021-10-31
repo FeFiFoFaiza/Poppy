@@ -17,8 +17,8 @@ public class countHi{
 	public static void main (String[] args){
 		countHi test = new countHi();
 
-		System.out.println(test."hiho not HOHIhi")); // → 2
-		System.out.println(test.countCode("hiHIhi")); // → 2
-		System.out.println(test.countCode("h")); // → 0
+		System.out.println(test.countHi("hiho not HOHIhi")); // → 2
+		System.out.println(test.countHi("hiHIhi")); // → 2
+		System.out.println(test.countHi("h")); // → 0
 	}
 }
