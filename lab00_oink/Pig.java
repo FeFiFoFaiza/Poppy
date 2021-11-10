@@ -1,6 +1,12 @@
+/**
+NEW IN THIS VERSION:
+  Implemented scanner in main method to read input
+**/
+import java.util.Scanner;
+
 public class Pig {
 
-    private static final String VOWELS = "aeiouy";
+    private static final String VOWELS = "aeiouyAEIOUY";
     private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String PUNCS = ".,:;!?";
 
@@ -194,25 +200,11 @@ public class Pig {
 
   public static void main( String[] args ) {
 
-    for( String word : args ) {
-      System.out.println( "allVowels \t" + allVowels(word) );
-      System.out.println( "firstVowel \t" + firstVowel(word) );
-      System.out.println( "countVowels \t" + countVowels(word) );
-      System.out.println( "engToPig \t" + engToPig(word) );
-      System.out.println( "---------------------" );
+    Scanner sc = new Scanner(System.in);
+
+    while(sc.hasNext()) {
+      System.out.println(engToPig(sc.next()));
     }
-
-//tests to make sure new methods work
-
-      System.out.println( "Is ! a punctuation? \t" + isPunc("!") );
-      System.out.println( "Is Y a punctuation? \t" + isPunc("Y") );
-      System.out.println( "Is ! unppercase? \t" + isUpperCase("!") );
-      System.out.println( "Is B uppercase? \t" + isUpperCase("B") );
-      System.out.println( "Does ca.t have punctuation? \t" + hasPunc("ca.t") );
-      System.out.println( "Does car have punstuation? \t" + hasPunc("cat") );
-      System.out.println( "Is Boohoo capatilized? \t" + beginsWithUpper("Boohoo") );
-      System.out.println( "Is yaeGer capatilized? \t" + beginsWithUpper("yaeGar") );
-
   }//end main()
 
 }//end class Pig

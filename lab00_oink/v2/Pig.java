@@ -1,3 +1,9 @@
+/**
+NEW IN THIS VERSION:
+  Implemented scanner in main method to read input
+**/
+import java.util.Scanner;
+
 public class Pig {
 
     private static final String VOWELS = "aeiouy";
@@ -194,10 +200,11 @@ public class Pig {
 
   public static void main( String[] args ) {
 
-    for( String word : args ) {
-      System.out.println( word + " in English \t" + engToPig(word));
-    }
+    Scanner sc = new Scanner(System.in);
 
+    while(sc.hasNext()) {
+      System.out.println(engToPig(sc.next()));
+    }
   }//end main()
 
 }//end class Pig
