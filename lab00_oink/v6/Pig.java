@@ -219,11 +219,8 @@ long version using for
   	public static void main( String[] args ) {
 		Scanner sc = new Scanner(System.in);
 		while(sc.hasNext()) {
-			System.out.print(engToPig(sc.next()) + " "); //trying to take in phrase and outputting onto one line
-			if (sc.next().equals("\n")) {  //doesn't work how make java recognize new line????
-				System.out.println();
-			} 
-		}
+			System.out.println(engToPig(sc.nextLine()));
+		} 
 	}//end main()
 
 }//end class Pig
