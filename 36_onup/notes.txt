@@ -1,0 +1,12 @@
+Faiza Huda, Huebert
+APCS
+HW36: All Quacked Up
+2021-11-19
+time spent: 0.3
+
+Instead of deleting, why not comment out for bisection debugging method?
+Add diagnostic SOP statements
+Clean up code
+( == ) checks if they are identical
+equals checks equivalence
+
