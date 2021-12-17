@@ -17,7 +17,7 @@ public class LinSearch
     int i = 0;
 
     while ( i < a.length ) {
-        if (a[i] == target){
+        if (a[i].equals(target)){
             tPos = i;
             break;
         }
