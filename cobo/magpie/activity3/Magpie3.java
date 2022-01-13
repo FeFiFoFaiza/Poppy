@@ -32,7 +32,7 @@ public class Magpie3
 		String response = "";
 		if (statement.length() == 0)
 		{
-			response = "Say something, please.";
+			response = "Please say something I'm giving up on you";
 		}
 		else if (findKeyword(statement, "no") >= 0)
 		{
@@ -44,6 +44,23 @@ public class Magpie3
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if (findKeyword(statement, "cat") >= 0
+				|| findKeyword(statement, "dog") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (findKeyword(statement, "Mr. Mykolyk") >= 0)
+		{
+			response = "He sounds like a snazzy dude.";
+		}
+		else if (findKeyword(statement, "flower") >= 0)
+		{
+			response =	"I'm actually allergic to flowers.";
+		}
+		else if (findKeyword(statement, "life") >= 0)
+		{
+			response = "I wish I was human like you...";
 		}
 		else
 		{
