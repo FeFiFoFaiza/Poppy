@@ -278,13 +278,21 @@ public class Magpie5
 	private String getRandomResponse ()
 	{
 		Random r = new Random ();
+		if (Math.random() < 0.001) {
+			return "https://www.youtube.com/channel/UCMyO2HtfGVBaM_DVQGMfuRw";
+		}
 		return randomResponses [r.nextInt(randomResponses.length)];
 	}
 	
 	private String [] randomResponses = {"Interesting, tell me more",
 			"Hmmm.",
 			"Do you really think so?",
-			"You don't say."
+			"You don't say.",
+			"What are you talking about?",
+			"Sorry, I spaced out. You're just too boring.",
+			"Sounds like a you problem",
+			"Get a life loser stop talking nonsense to robots",
+			"I love failing the turing test"
 	};
 	
 }
