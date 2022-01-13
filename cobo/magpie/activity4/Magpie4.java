@@ -54,6 +54,10 @@ public class Magpie4
 			response = transformIWantToStatement(statement);
 		}
 
+		// I something you
+		else if (findKeyword(statement, "I", 0) >= 0
+				&& omg oop sorry hahha
+
 		else
 		{
 			// Look for a two word (you <something> me)
@@ -92,7 +96,7 @@ public class Magpie4
 		}
 		int psn = findKeyword (statement, "I want to", 0);
 		String restOfStatement = statement.substring(psn + 9).trim();
-		return "What would it mean to " + restOfStatement + "?";
+		return "Would you really be happy if you had " + restOfStatement + "?";
 	}
 
 	

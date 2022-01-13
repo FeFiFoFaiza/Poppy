@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "cobo/magpie/activity3",
         "cobo/magpie/activity2",
-        "cobo/magpie/activity3"
+        "cobo/magpie/activity4"
     ]
 }
