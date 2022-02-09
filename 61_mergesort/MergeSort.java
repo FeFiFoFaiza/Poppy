@@ -2,7 +2,11 @@
   class MergeSort
   Implements mergesort on array of ints.
   Summary of Algorithm:
-  ***/
+	1. Split the array into two
+ 	2. Keep on splitting until it hits the base case: array length is 1
+ 	3. Arrays are compared: smallest element is added to a new array
+ 	4. Once all elements of an array are added, add extra elements from other array  
+***/
 
 public class MergeSort
 {
@@ -16,19 +20,30 @@ public class MergeSort
 
   private static int[] merge( int[] a, int[] b )
   {
-	int ctrA, ctrB = 0;
-	int[] answer = new int[a.length() + b.length()];
-	while (ctrA < a.length || ctrB < b.length) {
-		if (a[0] > b[0]) {
-			answer.add(b[0]);
-			b.remove(0);
-		}
-		if (b[0] > a[0]) {
-			answer.add(a[0]);
-			a.remove(0);
+	int ctrA = 0, ctrB = 0, index = 0;
+	int[] ans = new int[a.length + b.length];
+	while (ctrA < a.length && ctrB < b.length) {
+		if (a[ctrA] > b[ctrB]) {
+			ans[index] = b[ctrB];
+			index++;
+			ctrB++;
+		} else {
+			ans[index] = a[ctrA];
+			index++;
+			ctrA++;
 		}
 	}
-
+	while (ctrA < a.length) {
+		ans[index] = a[ctrA];
+		index++;
+		ctrA++;
+	}
+	while (ctrB < b.length) {
+		ans[index] = b[ctrB];
+		index++;
+		ctrB++;
+	}
+	return ans;
 
   }//end merge()
 
@@ -38,10 +53,23 @@ public class MergeSort
    * Sorts input array using mergesort algorithm
    * Returns sorted version of input array (ascending)
    ******************************************************/
-/**
+
   public static int[] sort( int[] arr )
   {
-
+	if (arr.length > 1) {
+		int mid = arr.length / 2;
+		int[] a = new int[mid];
+		int[] b = new int[arr.length - mid];
+		for (int i = 0; i < a.length; i++){
+			a[i] = arr[i];
+		}
+		for (int i = 0; i < b.length; i++){
+			b[i] = arr[mid + i];
+		}
+		return merge(sort(a), sort(b));
+	} else {
+		return arr;
+	}
   }//end sort()
 
 
@@ -53,7 +81,7 @@ public class MergeSort
     for( int i = 0 ; i<a.length; i++ )
       a[i] = 0;
   }
-**/
+
   //helper method for displaying an array
   public static void printArray( int[] a ) {
     System.out.print("[");
@@ -67,7 +95,6 @@ public class MergeSort
   //main method for testing
   public static void main( String [] args )
   {
-    /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
       int[] arr0 = {0};
       int[] arr1 = {1};
       int[] arr2 = {1,2};
@@ -82,18 +109,13 @@ public class MergeSort
       printArray( arr3 );
       System.out.println("\nMerging arr1 and arr0: ");
       printArray( merge(arr1,arr0) );
-      System.out.println("\nMerging arr4 and arr6: ");
-      printArray( merge(arr4,arr6) );
       System.out.println("\nSorting arr4-7...");
       printArray( sort( arr4 ) );
       printArray( sort( arr5 ) );
       printArray( sort( arr6 ) );
       printArray( sort( arr7 ) );
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-	int[] answer = {1, 2, 3, 4} ;
-	answer[0] = 5;
-	printArray(answer);
-	//answer.remove(2);
+      System.out.println("\nMerging arr4 and arr6: ");
+      printArray( merge(arr4,arr6) );
 
   }//end main()
 
