@@ -11,3 +11,32 @@ DISCOS
 
 QCC
  - What was mess for?
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Past stuff
+
+GigaMarc | Faiza H, Tom T, Huebert, John G, Josh G
+APCS pd 8
+HW60: A Termite is-a Turtle, a Thinker is-a Turtle
+2022-02-07
+time spent: 0.5 hr
+
+DISCOS
+ - We failed lol
+ - I have a bad memory so it's not my fault 
+   I couldn't remember who I got and gave cards to
+ - Pretty sure it was supposed to show mergesort
+
+QCC
+ - How in the world was this supposed to work? 
+   Once everyone has a card yea its's all sorted. But it's like 40smth 
+   separate decks. How do you condense it all yet keep it sorted yet not be able
+   to look at the cards as they come to you. 
+
+THINKER FIRMWARE
+ - You got more than one card? Split it up (or well try to) and give it to
+   other people without any cards
+ - You got 0 cards? Accept whatever comes to you
+ - You got 1 card? Return it back from whenst it came from
+ - Got your og deck back? Give it to wherever you've inherited it from
+
