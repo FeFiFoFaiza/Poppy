@@ -1,3 +1,11 @@
+/**
+Moony | Faiza Huda, John Gupta-She
+APCS
+L06 -- Read/Review/Expand
+2022-2-12
+time spent: 1.3
+**/
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
@@ -37,7 +45,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        //System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
@@ -161,5 +169,63 @@ public class Review {
     } else {
       return randomNegativeAdj();
     }
+  }
+
+  public static double totalSentiment(String fileName)
+  {
+    String text = textToString(fileName);
+    String[] words = text.split(SPACE, -1);
+    double totalVal = 0;
+    for (String a : words){
+      totalVal += sentimentVal(a);
+    }
+    return totalVal;
+  }
+
+  public static int starRating(String filename)
+  {
+    double rating = totalSentiment(filename);
+
+    if (rating < 0)
+	return 1;
+    else if (rating < 5)
+	return 2;
+    else if (rating < 10)
+	return 3;
+    else if (rating < 15)
+	return 4;
+    else
+	return 5;
+  }
+
+  public static String fakeReview(String fileName, int type)
+  {
+    String text = textToString(fileName);
+    String[] words = text.split(SPACE, -1);
+    String output = "";
+    for (String a: words) {
+	if (a.substring(0, 1).equals("*")) { 
+		if (type == 1) 
+	  		output += " " + randomPositiveAdj();
+		else if (type == 0)
+			output += " " + randomNegativeAdj();
+		else
+			output += " " + randomAdjective();
+	} else
+		output += " " + a;
+    }
+    return output;
+  }
+
+  public static void main(String[] args)
+  {
+    System.out.println(totalSentiment("simpleReview.txt"));
+    System.out.println(starRating("simpleReview.txt"));
+
+    System.out.println("Positive review:");
+    System.out.println(fakeReview("annotatedReview.txt", 1));
+
+    System.out.println("Negative review:");
+    System.out.println(fakeReview("annotatedReview.txt", 0));
   }
 }
