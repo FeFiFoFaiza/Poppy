@@ -1,4 +1,4 @@
-Faiza Huda
+Team GigaMarc: Faiza Huda, John Gupta-She
 APCS
 L06 -- Read/Review/Expand
 2022-2-12
@@ -67,7 +67,7 @@ Activity 4
 
 7. Make it only pick adjectives with a sentiment value of over 1
 
-Activity 5
+Activity 5 (DIANAAAAAAAA)
 
 1. Lately, I've been playing a lot of word games on iMessages. And one of those games in Anagrams.
 
