@@ -1,5 +1,5 @@
 /**
-Faiza Huda
+Team GigaMarc: Faiza Huda, John Gupta-She
 APCS
 L06 -- Read/Review/Expand
 2022-2-12
