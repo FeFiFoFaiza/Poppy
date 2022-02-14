@@ -1,16 +1,13 @@
-Moony | Faiza Huda, John Gupta-She
+Faiza Huda
 APCS
 L06 -- Read/Review/Expand
 2022-2-12
 time spent: 1.3
 
 DISCO:
- - using substrings and splits were very useful throughout the directive.
  - the csv file doesn't have enough words donde esta "hate" or "love" those are very essential to reviews
 
 QCC:
- - I'm not sure if splits were allowed. How else could we complete the task? Maybe with a clever usage of IndexOf?
- 	- The clever way ig is answered in Act3 Q3. Problem is we had to split before answering that question so it ain't our fault
  - Are we supposed to do activity 5
  - Would add headings to the reviews and adj list files but that would mess it all up...unless theres a way to ignore lines in txt files?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Answers to things~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
