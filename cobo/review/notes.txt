@@ -69,3 +69,39 @@ Activity 4
 6. Because the words in the csv file don't start with * so you won't be able to find them.
 
 7. Make it only pick adjectives with a sentiment value of over 1
+
+Activity 5
+
+1. Lately, I've been playing a lot of word games on iMessages. And one of those games in Anagrams.
+
+2. First we went over the neccessarry content needed to split strings and compare them. Then we talked about the algorithm 
+   before deciding on something and implementing it.
+
+3. isAnagram checks strings so it takes those in as parameters and it is static so the main method could easily access it.
+
+4. String str1 = s1.replaceAll(" ", "").toLowerCase();
+   String str2 = s2.replaceAll(" ", "").toLowerCase();
+
+   First we replace all white space with empty string and then we turn all the letters to lowercase. 
+
+5. if (str1.length() == str2.length()) {
+      for (int i = 0; i < str1.length(); i++) {
+        for (int j = 0; j < str2.length(); j++) {
+          if (str1.charAt(i) == str2.charAt(j)) {
+            str2 = str2.substring(0, j) + str2.substring(j + 1);
+            break;
+          }
+        }
+      }
+
+   We could have broken it up and did it all seperately.
+
+6. for (int i = 0; i < str1.length(); i++) {
+        for (int j = 0; j < str2.length(); j++) {
+          if (str1.charAt(i) == str2.charAt(j)) {
+            str2 = str2.substring(0, j) + str2.substring(j + 1);
+            break;
+          }
+        } 
+
+  We used for loop to iterate through each string
