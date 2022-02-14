@@ -1,5 +1,5 @@
 /**
-Moony | Faiza Huda, John Gupta-She
+Faiza Huda
 APCS
 L06 -- Read/Review/Expand
 2022-2-12
