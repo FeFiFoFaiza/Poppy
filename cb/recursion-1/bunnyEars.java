@@ -1,3 +1,10 @@
+/**
+CATVLLVS VIII x II | Faiza Huda, Diana Akhemedov, Truthful Tom, Ajax, Huebert
+APCS pd8
+HW64 -- Revistitation
+time spent: 1 hr
+**/
+
 public class bunnyEars{
 
 	public static int bunnyEars(int bunnies) {
