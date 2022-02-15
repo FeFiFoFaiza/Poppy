@@ -1,3 +1,10 @@
+/**
+CATVLLVS VIII x II | Faiza Huda, Diana Akhemedova, Truthful Tom, Ajax, Huebert
+APCS pd8
+HW64 -- Revistitation
+time spent: 1 hr
+**/
+
 public class fibonacci{
 
 	public static int fibonacci(int n){
