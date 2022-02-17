@@ -1,0 +1,21 @@
+GigaMarc | Faiza Huda, TT, HB, John Gupta-She, PO, Josh Gao, BM
+APCS pd08
+HW65: How Many Queens Can a Thinker Place, If a Thinker Can Places Queens...
+2022-02-16
+time spent: 2.5 hrs...
+
+DISCOS:
+    - Turns out I had the right idea but I overcomplicated the actual code haha
+    - You do not need to outright say that Queens == size bc the thing goes thru every column
+    - If you don't want to waste paper, use Lichess Board Editor
+
+QCC:
+    - Gives us the same stuff all the time, should we make the first row random instead?
+    - This output aint spaced out nicely :(
+    - 100 rows abt to break mi computadora 
+
+ALGO: 
+Place the first queen (0,0)
+Check if you can place a queen in the next column
+    If you can keep on going (call on method again)
+    If not then backtrack by removing the current Queen and go to the next available space
