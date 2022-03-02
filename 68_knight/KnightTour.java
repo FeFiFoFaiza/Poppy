@@ -89,17 +89,17 @@ class TourFinder
   //constructor -- build board of size n x n
   public TourFinder( int n )
   {
-    _sideLength = n + 4; //sidelength or with moat?
+    _sideLength = n; 
 
     //init 2D array to represent square board with moat
-    _board = int [_sideLength][_sideLength]
+    _board = new int [_sideLength + 4][_sideLength + 4];
 
     //SETUP BOARD --  0 for unvisited cell
     //               -1 for cell in moat
     //---------------------------------------------------------
-    for (int row = 0; row < _sideLength; row++){
-	for (int col = 0; row < _sideLength; col++){
-		if (row < 2 || row > _sideLength - 2 || col < 2 || col > _sideLength - 2){
+    for (int row = 0; row < n + 4; row++){
+	for (int col = 0; col < n + 4; col++){
+		if (row < 2 || row >= n + 2 || col < 2 || col >= _sideLength + 2){
 			_board[row][col] = -1;
 		}
 		else {
@@ -123,8 +123,8 @@ class TourFinder
     //emacs shortcut: M-x quoted-insert, then press ESC
 
     int i, j;
-    for( i=0; i < _sideLength; i++ ) {
-      for( j=0; j < _sideLength; j++ )
+    for( i=0; i < _sideLength + 4; i++ ) {
+      for( j=0; j < _sideLength + 4; j++ )
         retStr = retStr + String.format( "%3d", _board[j][i] );
       //"%3d" allots 3 spaces for each number
       retStr = retStr + "\n";
@@ -162,13 +162,13 @@ class TourFinder
     if ( _solved ) System.exit(0);
 
     //primary base case: tour completed
-    if ( ??? ) {
-      ???
+    if ( moves == _sideLength * _sideLength + 1) {
+      _solved = true;
       System.out.println( this ); //refresh screen
       return;
     }
     //other base case: stepped off board or onto visited cell
-    if ( ??? ) {
+    if ( _board[x][y] != 0) {
       return;
     }
     //otherwise, mark current location
@@ -176,7 +176,7 @@ class TourFinder
     else {
 
       //mark current cell with current move number
-      _board[x][y] = ???
+      _board[x][y] = moves;
 
       System.out.println( this ); //refresh screen
 
@@ -191,11 +191,19 @@ class TourFinder
        *     g . . . b
        *     . h . a .
       ******************************************/
-      ???
+      moves++;
+      findTour(x + 2, y + 1, moves);
+      findTour(x - 2, y + 1, moves);
+      findTour(x + 2, y - 1, moves);
+      findTour(x - 2, y - 1, moves);
+      findTour(x + 1, y + 2, moves);
+      findTour(x - 1, y + 2, moves);
+      findTour(x + 1, y - 2, moves);
+      findTour(x - 1, y - 2, moves);
 
       //If made it this far, path did not lead to tour, so back up...
       // (Overwrite number at this cell with a 0.)
-        ???
+        _board[x][y] = 0;
 
       System.out.println( this ); //refresh screen
     }
