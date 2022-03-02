@@ -1,8 +1,8 @@
-// Clyde Sinclair
+// Faiza
 // APCS pd0
 // HW68 -- recursively probing for a closed cycle
 // 2022-02-28m
-// time spent:  hrs
+// time spent: 1 hrs
 
 /***
  * SKELETON
@@ -15,16 +15,24 @@
  * $ java KnightTour [N]
  *
  * ALGO
- *
+ *	If all sqs filled
+		we done
+	else
+		move knight to a space
+		check if has any next move
+			if no put knight back where it was before and try next available spot
  * DISCO
- *
+ *	Only one public class in a file
  * QCC
+	pretty sure this broke computer
+	how were we supposed to get no# executions and what does it mean if real time is recorded but both cpu times are 0s
+	took too long honestly
  *
  * Mean execution times for boards of size n*n:
- * n=5   __s    across __ executions
- * n=6   __s    across __ executions
- * n=7   __s    across __ executions
- * n=8   __s    across __ executions
+ * n=5   11s         across __ executions
+ * n=6   6m13.79s    across __ executions
+ * n=7   8m28.22s    across __ executions
+ * n=8   I refuse to 
  *
  * POSIX PROTIP: to measure execution time from BASH, use time program:
  * $ time java KnightTour 5
