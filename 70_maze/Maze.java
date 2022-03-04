@@ -132,7 +132,7 @@ class MazeSolver {
     if (_maze[x][y] == '$') {
       _solved = true;
       System.out.print(this);
-      return;
+      System.exit(0);
     }
     // other base cases
     else if (x > w || y > h) {
@@ -157,6 +157,9 @@ class MazeSolver {
 
   // accessor method to help with randomized drop-in location
   public boolean onPath(int x, int y) {
+      if ( x > w || y > h || _maze[x][y] != '#'){
+        return false;
+      }
       return true;
   }
 
@@ -191,6 +194,7 @@ public class Maze {
 
     // drop our hero into maze at random location on path
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
+    
     // ms.solve( startX, startY );
     /*
      * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
