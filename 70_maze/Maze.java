@@ -1,8 +1,8 @@
-// Clyde Sinclair
-// APCS pd0
-// HW69 -- maze solving (blind, depth-first)
-// 2022-03-03r
-// time spent:  hrs
+// LoGIcaLly sPeAkINg… |David Chen + Daniel Jung + Faiza Huda + Truthful Tom + Huebert
+// APCS pd8
+// HW69: Making Sense
+// 2022-03-05f
+// time spent: 0.5 hr
 
 /***
  * SKEELTON for
@@ -15,12 +15,15 @@
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
+ *  Base case: If you are at the $ (exit), end the program.
+	Choose a cardinal direction and check to see if there are possible valid paths. Return false if there are no possible valid paths to go through 
+	(This returns back to the last valid path) and check the other directions as well. 
+	If there aren’t any valid paths for any direction, return to the previous working position.
  *
  * DISCO
  * 
  * QCC
- * 
+ *   What truly makes for a hard maze
  ***/
 
 //enable file I/O
