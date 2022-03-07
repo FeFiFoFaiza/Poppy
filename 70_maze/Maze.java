@@ -135,7 +135,7 @@ class MazeSolver {
       System.exit(0);
     }
     // other base cases
-    else if (x > w || y > h) {
+    else if (x < w || y < h) {
       return;
     } else if (_maze[x][y] != '#') {
       return;
