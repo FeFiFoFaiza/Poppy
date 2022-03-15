@@ -81,7 +81,7 @@ public class QuickSort
 
   public static void quickSortHelper ( int[] arr, int begin, int end) {
 	if (begin < end) {
-		int y = ((int)(end - begin) / 2);     //choosing yth element to be the mid one
+		int y = ((int)(end + begin) / 2);     //choosing yth element to be the mid one
 		int pIndex = QuickSelect.fastselect(arr, begin, end, y); //gives us the index of the middle element in arr
 
 		quickSortHelper( arr, begin, pIndex - 2);
