@@ -1,13 +1,29 @@
+// Team McDonalds$24MScam: Prattay Dey, Joshua Gao, Faiza Huda
+// Ducks : Winnie, Batman, Truthful Tom, Huebert
+// APCS pd08
+// HW80 -- Generic Lists
+// 2022-03-24
+// time spent: 1.0 hr
+// KtS consumed: 2
+
+/*
+DISCOS:
+- Find and replace is a very helpful tool but you have to be careful not to replace the wrong occurences
+- When calling a generic class, you have to include the specific type for that Object
+
+QCCs:
+- IS there an easier way to implement a generic class without having to include type in every occurence.
+
 /***
  * class LList v3
  * Implements a linked list of DLLNodes, each containing String data
  **/
 
-public class LList implements List //your List.java must be in same dir
+public class LList<Type> implements List<Type> //your List.java must be in same dir
 {
 
   //instance vars
-  private DLLNode _head, _tail; //pointers to first and last nodes
+  private DLLNode<Type> _head, _tail; //pointers to first and last nodes
   private int _size;
 
   // constructor -- initializes instance vars
@@ -15,13 +31,27 @@ public class LList implements List //your List.java must be in same dir
   {
     _head = _tail = null; //at birth, a list has no elements
     _size = 0;
-  }
+  }// Team McDonalds$24MScam: Prattay Dey, Joshua Gao, Faiza Huda
+// Ducks : Winnie, Batman, Truthful Tom, Huebert
+// APCS pd08
+// HW80 -- Generic Lists
+// 2022-03-24
+// time spent: 1.0 hr
+// KtS consumed: 2
+
+/*
+DISCOS:
+- Find and replace is a very helpful tool but you have to be careful not to replace the wrong occurences
+- When calling a generic class, you have to include the specific type for that Object
+
+QCCs:
+- IS there an easier way to implement a generic class without having to include type in every occurence.
 
 
   //--------------v  List interface methods  v--------------
 
   //add a node to end of list
-  public boolean add( String newVal )
+  public boolean add( Type newVal )
   {
     addLast( newVal );
     return true; //per Java API spec
@@ -29,7 +59,7 @@ public class LList implements List //your List.java must be in same dir
 
 
   //insert a node containing newVal at position index
-  public void add( int index, String newVal )
+  public void add( int index, Type newVal )
   {
     if ( index < 0 || index > size() )
       throw new IndexOutOfBoundsException();
@@ -37,20 +67,20 @@ public class LList implements List //your List.java must be in same dir
     else if ( index == size() )
       addLast( newVal );
 
-    DLLNode newNode = new DLLNode( newVal, null, null );
+    DLLNode<Type> newNode = new DLLNode<Type>( newVal, null, null );
 
     //if index==0, insert node before head node
     if ( index == 0 )
       addFirst( newVal );
     else {
-      DLLNode tmp1 = _head; //create alias to head
+      DLLNode<Type> tmp1 = _head; //create alias to head
 
       //walk tmp1 to node before desired node
       for( int i=0; i < index-1; i++ )
         tmp1 = tmp1.getNext();
 
       //init a pointer to node at insertion index
-      DLLNode tmp2 = tmp1.getNext(); 
+      DLLNode<Type> tmp2 = tmp1.getNext();
 
       //insert new node
       newNode.setNext( tmp2 );
@@ -65,7 +95,7 @@ public class LList implements List //your List.java must be in same dir
 
 
   //remove node at pos index, return its cargo
-  public String remove( int index )
+  public Type remove( int index )
   {
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
@@ -75,7 +105,7 @@ public class LList implements List //your List.java must be in same dir
     else if ( index == size()-1 )
       return removeLast();
     else {
-      DLLNode tmp1 = _head; //create alias to head
+      DLLNode<Type> tmp1 = _head; //create alias to head
 
       //walk to node before desired node
       for( int i=0; i < index-1; i++ ) {
@@ -83,7 +113,7 @@ public class LList implements List //your List.java must be in same dir
         System.out.println( "tmp1: " + tmp1.getCargo() );
       }
       //check target node's cargo hold
-      String retVal = tmp1.getNext().getCargo();
+      Type retVal = tmp1.getNext().getCargo();
 
       //remove target node
       tmp1.setNext( tmp1.getNext().getNext() );
@@ -97,13 +127,14 @@ public class LList implements List //your List.java must be in same dir
   }
 
 
-  public String get( int index )
+  public Type get( int index )
   {
+
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    String retVal;
-    DLLNode tmp = _head; //create alias to head
+    Type retVal;
+    DLLNode<Type> tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index; i++ )
@@ -115,19 +146,20 @@ public class LList implements List //your List.java must be in same dir
   }
 
 
-  public String set( int index, String newVal )
+  public Type set( int index, Type newVal )
   {
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    DLLNode tmp = _head; //create alias to head
+    DLLNode<Type> tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index; i++ )
       tmp = tmp.getNext();
 
-    //store target node's cargo
-    String oldVal = tmp.getCargo();
+    //storeLList.java:118: error: name clash: set(int,Type) in LList and set(int,Object) in List have the same erasure, yet neither overrides the other
+ //target nodes cargo
+    Type oldVal = tmp.getCargo();
 
     //modify target node's cargo
     tmp.setCargo( newVal );
@@ -144,10 +176,10 @@ public class LList implements List //your List.java must be in same dir
 
   //--------------v  Helper methods  v--------------
 
-  public void addFirst( String newFirstVal )
+  public void addFirst( Type newFirstVal )
   {
     //insert new node before first node (prev=null, next=_head)
-    _head = new DLLNode( newFirstVal, null, _head );
+    _head = new DLLNode<Type>( newFirstVal, null, _head );
 
     if ( _size == 0 )
       _tail = _head;
@@ -157,10 +189,10 @@ public class LList implements List //your List.java must be in same dir
   }
 
 
-  public void addLast( String newLastVal )
+  public void addLast( Type newLastVal )
   {
     //insert new node after last node (prev=_last, next=null)
-    _tail = new DLLNode( newLastVal, _tail, null );
+    _tail = new DLLNode<Type>( newLastVal, _tail, null );
 
     if ( _size == 0 )
       _head = _tail;
@@ -170,14 +202,14 @@ public class LList implements List //your List.java must be in same dir
   }
 
 
-  public String getFirst() { return _head.getCargo(); }
+  public Type getFirst() { return _head.getCargo(); }
 
-  public String getLast() { return _tail.getCargo(); }
+  public Type getLast() { return _tail.getCargo(); }
 
 
-  public String removeFirst()
+  public Type removeFirst()
   {
-    String retVal = getFirst();
+    Type retVal = getFirst();
     if ( size() == 1 ) {
       _head = _tail = null;
     }
@@ -189,9 +221,9 @@ public class LList implements List //your List.java must be in same dir
     return retVal;
   }
 
-  public String removeLast()
+  public Type removeLast()
   {
-    String retVal = getLast();
+    Type retVal = getLast();
     if ( size() == 1 ) {
       _head = _tail = null;
     }
@@ -209,7 +241,7 @@ public class LList implements List //your List.java must be in same dir
   public String toString()
   {
     String retStr = "HEAD->";
-    DLLNode tmp = _head; //init tr
+    DLLNode<Type> tmp = _head; //init tr
     while( tmp != null ) {
       retStr += tmp.getCargo() + "->";
       tmp = tmp.getNext();

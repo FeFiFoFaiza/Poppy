@@ -1,17 +1,33 @@
+// Team McDonalds$24MScam: Prattay Dey, Joshua Gao, Faiza Huda
+// Ducks : Winnie, Batman, Truthful Tom, Huebert
+// APCS pd08
+// HW80 -- Generic Lists
+// 2022-03-24
+// time spent: 1.0 hr
+// KtS consumed: 2
+
+/*
+DISCOS:
+- Find and replace is a very helpful tool but you have to be careful not to replace the wrong occurences
+- When calling a generic class, you have to include the specific type for that Object
+
+QCCs:
+- IS there an easier way to implement a generic class without having to include type in every occurence.
+
 /***
  * class DLLNode v1
  * Implements a node, for use in lists and other container classes.
  * Stores a String as cargo.
  **/
 
-public class DLLNode <Type T>
+public class DLLNode<Type>
 {
-  private String _cargo;    //cargo may only be of type String
-  private DLLNode _nextNode, _prevNode; //pointers to next, prev DLLNodes
+  private Type _cargo;
+  private DLLNode<Type> _nextNode, _prevNode; //pointers to next, prev DLLNodes
 
 
   // constructor -- initializes instance vars
-  public DLLNode( String value, DLLNode prev, DLLNode next )
+  public DLLNode( Type value, DLLNode<Type> prev, DLLNode<Type> next )
   {
     _cargo = value;
     _nextNode = next;
@@ -20,32 +36,32 @@ public class DLLNode <Type T>
 
 
   //--------------v  ACCESSORS  v--------------
-  public String getCargo() { return _cargo; }
+  public Type getCargo() { return _cargo; }
 
-  public DLLNode getNext() { return _nextNode; }
+  public DLLNode<Type> getNext() { return _nextNode; }
 
-  public DLLNode getPrev() { return _prevNode; }
+  public DLLNode<Type> getPrev() { return _prevNode; }
   //--------------^  ACCESSORS  ^--------------
 
 
   //--------------v  MUTATORS  v--------------
-  public String setCargo( String newCargo )
+  public Type setCargo( Type newCargo )
   {
-    String foo = getCargo();
+    Type foo = getCargo();
     _cargo = newCargo;
     return foo;
   }
 
-  public DLLNode setNext( DLLNode newNext )
+  public DLLNode<Type> setNext( DLLNode<Type> newNext )
   {
-    DLLNode foo = getNext();
+    DLLNode<Type> foo = getNext();
     _nextNode = newNext;
     return foo;
   }
 
-  public DLLNode setPrev( DLLNode newPrev )
+  public DLLNode<Type> setPrev( DLLNode<Type> newPrev )
   {
-    DLLNode foo = getPrev();
+    DLLNode<Type> foo = getPrev();
     _prevNode = newPrev;
     return foo;
   }
@@ -71,7 +87,7 @@ public class DLLNode <Type T>
     //Create a third node after the second
     first.getNext().setNext( new DLLNode( "cow", null ) );
 
-    DLLNode temp = first; 
+    DLLNode temp = first;
     while( temp != null ) {
       System.out.println( temp );
       temp = temp.getNext();

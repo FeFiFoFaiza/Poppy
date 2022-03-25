@@ -1,3 +1,20 @@
+// Team McDonalds$24MScam: Prattay Dey, Joshua Gao, Faiza Huda
+// Ducks : Winnie, Batman, Truthful Tom, Huebert
+// APCS pd08
+// HW80 -- Generic Lists
+// 2022-03-24
+// time spent: 1.0 hr
+// KtS consumed: 2
+
+/*
+DISCOS:
+- Find and replace is a very helpful tool but you have to be careful not to replace the wrong occurences
+- When calling a generic class, you have to include the specific type for that Object
+
+QCCs:
+- IS there an easier way to implement a generic class without having to include type in every occurence.
+
+
 /***
  * class ListTester
  * ...for putting your LList through its paces
@@ -12,7 +29,7 @@ public class ListTester
   {
 
     //instantiate... var type List, obj type LList
-    List wu = new LList();
+    List<String> wu = new LList<String>();
 
     System.out.println(wu);
     wu.add("RZA");
@@ -54,9 +71,37 @@ public class ListTester
       wu.remove(n);
       System.out.println("Updated list: " + wu);
     }
+
+
+    List<Integer> zu = new LList<Integer>();
+
+    System.out.println(zu);
+    zu.add(1);
+
+    System.out.println(zu);
+    zu.add(2);
+
+    System.out.println(zu);
+    zu.add(3);
+
+    System.out.println(zu);
+    zu.add(4);
+
+    System.out.println(zu);
+    zu.add(5);
+
+    System.out.println(zu);
+    zu.add(6);
+
+    System.out.println(zu);
+    zu.add(7);
+
+    System.out.println(zu);
+    zu.add(8);
+
+    System.out.println(zu);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class
-
