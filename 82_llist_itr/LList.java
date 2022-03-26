@@ -152,10 +152,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public List<T> retItr()
-  {
-    
-    Iterator retItr =
+  public Iterator iterator()
+  {   
+    return new MyIterator();
   }
 
   //--------------------------------------------------------
@@ -255,7 +254,8 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //constructor
     public MyIterator()
     {
-      /* YOUR CODE HERE */
+      _dummy = _head;
+      _okToRemove = false;
     }
 
     //-----------------------------------------------------------
@@ -263,14 +263,20 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return true if iteration has more elements.
     public boolean hasNext()
     {
-      /* YOUR CODE HERE */
+      return (_dummy.getNext() != null);
     }
 
 
     //return next element in this iteration
     public T next()
     {
-      /* YOUR CODE HERE */
+      if (hasNext()){
+	_okToRemove = true;
+        _dummy = _dummy.getNext();
+	return _dummy.getCargo();
+      } 
+      else { 
+	return null; }
     }
 
 
@@ -279,7 +285,10 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //               (...so that hasNext() will not crash)
     public void remove()
     {
-            /* YOUR CODE HERE */
+            if (_okToRemove) {
+		_dummy.getNext().setPrev(_dummy.getPrev());
+		_dummy.getPrev().setNext(_dummy.getNext());
+	    }
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
@@ -290,7 +299,6 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println("initially: " );
@@ -333,7 +341,6 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class LList
