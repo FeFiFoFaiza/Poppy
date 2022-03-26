@@ -34,7 +34,6 @@
 
 
 
-
 import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
@@ -55,7 +54,7 @@ public class ItrWork
     return false;
   }
 
-  //explicitly using an iterator
+  //explicitly usin  Integer n = it.next(); // traversg an iterator
   //returns a boolean to indicate whether key is present in L
   public static boolean foundB( Integer key,
                                 List<Integer> L )
@@ -90,12 +89,12 @@ public class ItrWork
   //returns a list containing the odd numbers in L
   public static List<Integer> oddsB( List<Integer> L )
   {
-    List<Integer> result = new ArrayList();
+    List<Integer> result = new ArrayList<Integer>();
 
     Iterator it = L.iterator(); // creates Iterator Object for given List
 
     while ( it.hasNext() ){
-      int n = (int) it.next();
+      Integer n = it.next();
       if (n % 2 == 1){
         result.add(n);
       }
