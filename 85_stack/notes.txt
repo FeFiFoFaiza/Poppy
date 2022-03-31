@@ -1,0 +1,8 @@
+2nd Ave Trains | Faiza H, Huebert, Truthful Tom, Prattay D, Joshua G
+apcs pd8
+HW85 -- Leon Leonwood Stack
+2022-03-30
+time spent: 0.6hr
+
+When implementing stack make sure to specify type else java will use object and it gets no bueno
+Once you get ALStack working, LLStack is ez. Just replace AL with LL
