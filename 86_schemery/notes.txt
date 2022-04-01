@@ -1,0 +1,20 @@
+2nd Ave Trains | Faiza H, Huebert, Truthful Tom, Prattay D, Joshua G
+apcs pd8
+HW86 -- What a Racket
+2022-03-31
+time spent: 2.3hr
+
+got two stacks bc it seems like unload needs one but i need one too
+or
+i do unload but instead of closing parens its open ones
+
+im pretty sure this is all inefficient lol
+
+THE ALGO WAS WRONG HAHA
+god new algo is soooo much easier and makes sense...if only if i used two stacks earlier :D
+
+line 38: you want the parens it's the * you gotta look out for
+ - before I used isNumber() and thats what messed me up 
+ - this literally cost me an hour HAHAHAHAHAHHA
+
+WRITING IT DOWN IS THE BEST WAY TO GO DOWN IN HISTORY

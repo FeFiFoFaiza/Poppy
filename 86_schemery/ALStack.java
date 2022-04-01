@@ -50,6 +50,10 @@ public class ALStack<T> implements Stack<T>
     return _stack.size() == 0;
   }
 
+  public int getSize()
+  {
+    return _stack.size();
+  }
 
   //main method for testing
   public static void main( String[] args )
@@ -111,4 +115,4 @@ public class ALStack<T> implements Stack<T>
     System.out.println( "pop: " + tastyStack.pop() );
     System.out.println( tastyStack.pop() );
   }//end main
-
+}

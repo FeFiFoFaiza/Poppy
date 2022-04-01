@@ -18,4 +18,7 @@ public interface Stack<PANCAKE>
     //Push an element onto top of this stack.
     public void push( PANCAKE x );
 
+    //Returns stack size.
+    public int getSize();
+
 }//end interface
