@@ -29,11 +29,10 @@ public class Scheme
       Stack<String> _parenStack = new ALStack<String>();
       int Ops = 0;
 
-      for(String character : expr.split(" ")){
+      for(String character : expr.split("\\s+")){
         if (!character.equals(")"))
           _stack.push(character);
-        else 
-        {
+        else {
           _stack.push(character);
           while (!(_stack.peekTop().equals("+") || _stack.peekTop().equals("-") || _stack.peekTop().equals("*"))){
             _parenStack.push(_stack.pop());
@@ -65,9 +64,11 @@ public class Scheme
   {
     Integer ans = Integer.parseInt(numbers.pop());
     String currentChar = "";
-    while (!numbers.isEmpty()){
+    while (!numbers.isEmpty())
+     {
       currentChar = numbers.pop();
-      if(isNumber(currentChar)){
+      if(isNumber(currentChar))
+      {
         if (op == 1)
           ans += Integer.parseInt(currentChar);
         else if (op ==2)
