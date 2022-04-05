@@ -1,11 +1,11 @@
-public class LLNode
+public class LLNode<SWASHBUCKLE>
 {
   //instance vars
-  private String _cargo;
-  private LLNode _nextNode;
+  private SWASHBUCKLE _cargo;
+  private LLNode<SWASHBUCKLE> _nextNode;
 
   // constructor
-  public LLNode( String value, LLNode next )
+  public LLNode( SWASHBUCKLE value, LLNode<SWASHBUCKLE> next )
   {
     _cargo = value;
     _nextNode = next;
@@ -13,12 +13,12 @@ public class LLNode
 
 
   //--------------v  ACCESSORS  v--------------
-  public String getCargo()
+  public SWASHBUCKLE getCargo()
   {
     return _cargo;
   }
 
-  public LLNode getNext()
+  public LLNode<SWASHBUCKLE> getNext()
   {
     return _nextNode;
   }
@@ -26,16 +26,16 @@ public class LLNode
 
 
   //--------------v  MUTATORS  v--------------
-  public String setCargo( String newCargo )
+  public SWASHBUCKLE setCargo( SWASHBUCKLE newCargo )
   {
-    String foo = getCargo();
+    SWASHBUCKLE foo = getCargo();
     _cargo = newCargo;
     return foo;
   }
 
-  public LLNode setNext( LLNode newNext )
+  public LLNode<SWASHBUCKLE> setNext( LLNode<SWASHBUCKLE> newNext )
   {
-    LLNode foo = getNext();
+    LLNode<SWASHBUCKLE> foo = getNext();
     _nextNode = newNext;
     return foo;
   }
@@ -45,14 +45,14 @@ public class LLNode
   // override inherited toString
   public String toString()
   {
-    return _cargo;
+    return _cargo.toString();
   }
 
 
   //main method for testing
   public static void main( String[] args )
   {
-
+    /**
     //Below is an exercise in creating a linked list...
 
     //Create a node
