@@ -27,7 +27,7 @@ public class BST
   BST()
   {
     /*** YOUR IMPLEMENTATION HERE ***/
-    _root = new TreeNode(0);
+    _root = null;
   }
 
 
@@ -38,6 +38,8 @@ public class BST
   public void insert( int newVal )
   {
     TreeNode newNode = new TreeNode( newVal );
+    if (_root == null) 
+      _root = newNode;
     insert(_root, newNode);
   }
 
